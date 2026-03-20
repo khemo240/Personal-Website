@@ -7,7 +7,7 @@ function outsideLinks(name, link){
     this.name=name;
     this.link=link;
 }
-var outsideLinksArray=[new outsideLinks("Anime","Anime/anime.html"),
+var outsideLinksArray=[new outsideLinks("Anime","./Anime/anime.html"),
      new outsideLinks("Manga","./Manga/manga.html"),
       new outsideLinks("Video Games","./Video Games/video-games.html"),
        new outsideLinks("Music","./Music/music.html"),
@@ -30,7 +30,6 @@ var websiteBody= new WebsiteBody(
  ["About Me","Education","Work Experience","Skills","Awards","Certifications","Volunteering","My Podcast","YouTube","GitHub","Reference"]
 );
 
-
 function createHeader(titleHeading,index){
     index = (index || "").trim();
     var pageTitle = (index === "" ? "Portfolio" : titleHeading);
@@ -52,6 +51,7 @@ function createOutsideLinks(extradot){
     for (var i of outsideLinksArray){
         var linkPath = i.link.split('/').pop();
         var linkHtml = "<a href='" + extradot + i.link + "'" + (linkPath === currentPage ? " class='active'" : "") + ">" + i.name + "</a>";
+        console.log(linkHtml);
         $("nav").append(linkHtml);
     }
 }

@@ -19,16 +19,13 @@ var Ratings=[new Rating("Great", "I really like this food and would recommend it
              new Rating("Bad", "I don't like this food and would not recommend it to others."),];
 var foodsIEat = [new Food("Pizza", "Great"),
                     new Food("Pasta", "Great"),
-                    new Food("Sushi", "Good"),
-                    new Food("Tacos", "Great"),
                     new Food("Burgers", "Good"),
                     new Food("Chicken", "Great"),
                     new Food("Rice", "Average"),
                     new Food("Salmon", "Great"),
-                    new Food("Steak", "Great"),
                     new Food("Salad", "Good")];
-var foodsIWantToTry = [new Food("Korean BBQ", "Great"), new Food("Thai Curry", "Great")];
-appendParagraph(createId(body[0]),appendStrong("Pizza"));
+var foodsIWantToTry = [];
+appendParagraph(createId(body[0]),appendStrong("Rice and Peas and Turkey neck"));
 
 for (var food of foodsIEat) {
     appendParagraph(createId(body[1]), appendStrong(food.name) + " - " + food.rating);

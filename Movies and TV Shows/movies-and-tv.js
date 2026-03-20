@@ -17,20 +17,17 @@ var Ratings=[new Rating("Great", "I really like this movie/TV show and would rec
              new Rating("Good", "I like this movie/TV show and would recommend it to others."),
              new Rating("Average", "This movie/TV show is okay, but I wouldn't necessarily recommend it to others."),
              new Rating("Bad", "I don't like this movie/TV show and would not recommend it to others."),];
-var moviesIHaveWatched = [new MovieTV("The Shawshank Redemption", "Great"),
-                    new MovieTV("The Godfather", "Great"),
-                    new MovieTV("Pulp Fiction", "Great"),
-                    new MovieTV("The Dark Knight", "Great"),
+var moviesIHaveWatched = [new MovieTV("The Dark Knight", "Great"),
                     new MovieTV("The Avengers", "Good"),
-                    new MovieTV("Inception", "Great")];
-var moviesIamWatching = [new MovieTV("Dune", "Great")];
-var tvShowsIHaveWatched = [new MovieTV("Breaking Bad", "Great"),
-                    new MovieTV("Stranger Things", "Good"),
-                    new MovieTV("Game of Thrones", "Great"),
-                    new MovieTV("The Office", "Great")];
-var tvShowsIamWatching = [new MovieTV("The Mandalorian", "Great")];
-appendParagraph(createId(body[0]),appendStrong("The Shawshank Redemption"));
-appendParagraph(createId(body[3]),appendStrong("Breaking Bad"));
+                    new MovieTV("Inception", "Great"),
+                    new MovieTV("The Matrix", "Great"),
+                new MovieTV("definitely, maybe", "Great")];
+var moviesIamWatching = [new MovieTV("Definitely, Maybe", "Great")];
+var tvShowsIHaveWatched = [new MovieTV("Game of Thrones", "Great"),
+                    ];
+var tvShowsIamWatching = [new MovieTV("Blacklist", "Great")];
+appendParagraph(createId(body[0]),appendStrong("Definitely, Maybe"));
+appendParagraph(createId(body[3]),appendStrong("Vampire Diaries"));
 
 for (var movie of moviesIHaveWatched) {
     appendParagraph(createId(body[1]), appendStrong(movie.name) + " - " + movie.rating);

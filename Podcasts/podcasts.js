@@ -17,18 +17,11 @@ var Ratings=[new Rating("Great", "I really like this podcast and would recommend
              new Rating("Good", "I like this podcast and would recommend it to others."),
              new Rating("Average", "This podcast is okay, but I wouldn't necessarily recommend it to others."),
              new Rating("Bad", "I don't like this podcast and would not recommend it to others."),];
-var podcastsIHaveListened = [new Podcast("Serial", "Great"),
-                    new Podcast("Radiolab", "Great"),
-                    new Podcast("The Daily", "Good"),
-                    new Podcast("Stuff You Should Know", "Great"),
-                    new Podcast("How I Built This", "Good"),
-                    new Podcast("Planet Money", "Great"),
-                    new Podcast("99% Invisible", "Great"),
-                    new Podcast("Reply All", "Good"),
-                    new Podcast("The Joe Rogan Experience", "Average"),
-                    new Podcast("Crime Junkie", "Good")];
-var podcastsIamListening = [new Podcast("Smartless", "Great")];
-appendParagraph(createId(body[0]),appendStrong("Serial"));
+var podcastsIHaveListened = [
+                    new Podcast("The Joe Rogan Experience", "Great"),
+                    ];
+var podcastsIamListening = [new Podcast("Talkville", "Great")];
+appendParagraph(createId(body[0]),appendStrong("Grace"));
 
 for (var podcast of podcastsIHaveListened) {
     appendParagraph(createId(body[1]), appendStrong(podcast.name) + " - " + podcast.rating);

@@ -1,6 +1,6 @@
 createHeader("Cartoon", "../index.html");
 createOutsideLinks(".");
-var body=["My Favorite Cartoons","Cartoons I have watched","Cartoons I am watching"];
+var body=["My Favorite Cartoon","Cartoons I have watched","Cartoons I am watching"];
 for (var i in body) {
     appendSection(createId(body[i]), body[i]);
 }
@@ -19,15 +19,11 @@ var Ratings=[new Rating("Great", "I really like this cartoon and would recommend
              new Rating("Bad", "I don't like this cartoon and would not recommend it to others."),];
 var cartoonsIHaveWatched = [new Cartoon("Tom and Jerry", "Great"),
                     new Cartoon("Looney Tunes", "Great"),
-                    new Cartoon("The Simpsons", "Good"),
                     new Cartoon("Family Guy", "Average"),
-                    new Cartoon("South Park", "Good"),
-                    new Cartoon("Rick and Morty", "Great"),
-                    new Cartoon("BoJack Horseman", "Great"),
                     new Cartoon("Avatar: The Last Airbender", "Great"),
                     new Cartoon("SpongeBob SquarePants", "Good"),
-                    new Cartoon("Futurama", "Great")];
-var cartoonsIamWatching = [new Cartoon("The Boys", "Great")];
+                    ];
+var cartoonsIamWatching = [new Cartoon("Johnny Test", "Great")];
 appendParagraph(createId(body[0]),appendStrong("Tom and Jerry"));
 
 for (var cartoon of cartoonsIHaveWatched) {

@@ -1,13 +1,4 @@
 
-// function WebsiteBody(headers, titleHeading){
-//     this.headers=headers;
-//     this.titleHeading=titleHeading;
-// }
-// var websiteBody= new WebsiteBody(
-//  [ "About","Education","Experience","Skills","Awards","Certifications","Volunteering","Podcast","YouTube","GitHub","Reference","Contact"],
-//  ["About Me","Education","Work Experience","Skills","Awards","Certifications","Volunteering","Podcast","YouTube","GitHub","Reference"]
-// );
-
 //Adds New education
 function Education(institutionName, degreeAwarded, startYear,endYear, relevantCourse) {
    this.institutionName=institutionName;
@@ -81,7 +72,8 @@ function RelevantLink(name,link){
 }
 var profile= new Profile("Collin Smith-Brooks",["Biochemist","Aviation Professional","Podcaster","Web Developer"],["science","aviation","customer service","web development","media"],"I am a Biochemistry graduate with diverse experience in aviation, customer service, and media. I host the Reframing Mindset Podcast and I am passionate about problem-solving, communication, and leadership.",[new Education("University Of The West Indies","BSc Biochemistry","2018","2015",[new RelevantCourse("BioEnergetics and Cell Metabolism","Pass"), new RelevantCourse("Software Engineering","Pass"),new RelevantCourse("Object Oriented Design and Implemation","Pass"),new RelevantCourse("Discrete Mathematics","Pass"),new RelevantCourse("Critical Reading and Writing","Pass")]),
 new Education("Herbert Morrison Technical High (Sixth Form Programme)","ASc Natural Science","2013","2015",[new RelevantCourse("Biology Unit 2","2"),new RelevantCourse("Caribbean Studies","4"),new RelevantCourse("Chemistry Unit 2","1"),new RelevantCourse("Pure Mathematics Unit 2","3"),new RelevantCourse("Biology Unit 1","2"),new RelevantCourse("Chemistry Unit 1","2"),new RelevantCourse("Communication Studies","3"), new RelevantCourse("Pure Mathematics Unit 1","3")]),
-new Education("Herbert Morrison Technical High","Diploma","2008","2013",[new RelevantCourse("Principle of Business","1"),new RelevantCourse("Biology","2"),new RelevantCourse("Chemistry","3"),new RelevantCourse("Geography","2"),new RelevantCourse("Information Technology","1"),new RelevantCourse("Technical Drawing","2")])],[new WorkExperience("Ramp Agent","Menzies Aviation","Donald Sangster International Airport","Nov 2023","April 2025","responsible for under-wing services for aircraft,including guiding and parking aircraft,loading and unloading luggage and cargo, and performing cabin maintenance tasks.","Contract"),
+new Education("Herbert Morrison Technical High","Diploma","2008","2013",[new RelevantCourse("Principle of Business","1"),new RelevantCourse("Biology","2"),new RelevantCourse("Chemistry","3"),new RelevantCourse("Geography","2"),new RelevantCourse("Information Technology","1"),new RelevantCourse("Technical Drawing","2")]),
+new Education("Chester Castle All Age","Certificate","2002","2008",[new RelevantCourse("Mathematics","Pass"),new RelevantCourse("Science","Pass"),new RelevantCourse("Language Arts","Pass")])],[new WorkExperience("Ramp Agent","Menzies Aviation","Donald Sangster International Airport","Nov 2023","April 2025","responsible for under-wing services for aircraft,including guiding and parking aircraft,loading and unloading luggage and cargo, and performing cabin maintenance tasks.","Contract"),
     new WorkExperience("Airside Vehicle Operator","Menzies Aviation","Donald Sangster International Airport","March 2024","April 2025","Operating Vehicles Airside","Contract"),
 new WorkExperience("Podcast Host","Reframing Mindset Podcast","Westmoreland","Oct 2020","Present","Podcast where I clear my head of my thoughts that are preventing clarity, practice my speech and other random things.","Full-time"),
 new WorkExperience("Service Advisor","Advanced CallCenter Technologies"," Barnett Tech Park, 3 Megabyte Drive, Montego Bay","August 2023","September 2023","Maintenance of Health insurance policies for customers of Florida Blue.","Full-time"),
@@ -203,7 +195,7 @@ new Award("Third place Grade 7","2009")],[new Certification("Dangerous Goods- Mo
 
 
 createHeader(profile.name,"");
-createOutsideLinks(".");
+createOutsideLinks("");
 
 $("#about p").text(profile.aboutMe);
 //button not ready to download resume
@@ -236,7 +228,7 @@ for (var i of profile.intro){
 }
 count=0;
 for( var title of websiteBody.titleHeading){
-    $("main").append("<section id='"+websiteBody.headers[count].toLowerCase()+"' ><h2>"+title+"</h2> </section>");
+   appendSection(websiteBody.headers[count].toLowerCase(), title);
     count++;
 }
 appendParagraph("about", profile.aboutMe);
