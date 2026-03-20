@@ -7,7 +7,7 @@ function outsideLinks(name, link){
     this.name=name;
     this.link=link;
 }
-var outsideLinksArray=[new outsideLinks("Anime","./Anime/anime.html"),
+var outsideLinksArray=[new outsideLinks("Anime","Anime/anime.html"),
      new outsideLinks("Manga","./Manga/manga.html"),
       new outsideLinks("Video Games","./Video Games/video-games.html"),
        new outsideLinks("Music","./Music/music.html"),
