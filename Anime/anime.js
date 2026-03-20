@@ -1,2 +1,2 @@
 createHeader("Anime", "");
-createOutsideLinks(".");
+createOutsideLinks("");
