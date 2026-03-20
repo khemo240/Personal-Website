@@ -1,0 +1,2 @@
+createHeader("Anime", "");
+createOutsideLinks(".");
